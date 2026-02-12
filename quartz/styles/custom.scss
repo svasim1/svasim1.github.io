@@ -89,6 +89,11 @@ body {
   opacity: 0.8;
 }
 
+/* Hide external link icons */
+a.external .external-icon {
+  display: none;
+}
+
 /* Hide header controls inside popover previews */
 .popover .darkmode,
 .popover .search {
