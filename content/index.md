@@ -21,24 +21,25 @@ This website is built with a very cool framework i recently discovered, [Quartz]
 
 ---
 
-## Featured projects
+### Featured projects
 
 - [Cybrawl](Cybrawl.md)
 - [Driverbot](driverbot.md)
 - [LLM testing](llm-testing.md)
 
 ---
+### Connect with me
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;margin:0.8rem 0;">
-  <a href="https://www.linkedin.com/in/svante-ericsson/" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
+  <a href="https://www.linkedin.com/in/svante-ericsson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
     <div style="font-weight:700;letter-spacing:0.02em;">LinkedIn</div>
     <div style="opacity:0.8;">Work, awards, and highlights</div>
   </a>
-  <a href="https://github.com/svasim1" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(138,163,155,0.15),rgba(200,122,90,0.15));">
+  <a href="https://github.com/svasim1" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(138,163,155,0.15),rgba(200,122,90,0.15));">
     <div style="font-weight:700;letter-spacing:0.02em;">GitHub</div>
     <div style="opacity:0.8;">Projects and experiments</div>
   </a>
-  <a href="https://www.instagram.com/svante.ericsson/" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
+  <a href="https://www.instagram.com/svante.ericsson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
     <div style="font-weight:700;letter-spacing:0.02em;">Instagram</div>
     <div style="opacity:0.8;">Behind the scenes</div>
   </a>
