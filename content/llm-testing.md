@@ -13,6 +13,8 @@ tags:
 cssclasses: ""
 ---
 
+An LLM (Large Language Model) with Retrieval-Augmented Generation (RAG) backend and API, built in Python.
+
 ## Technologies
 
 - Python
