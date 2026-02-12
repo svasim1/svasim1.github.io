@@ -119,6 +119,46 @@ body {
   }
 }
 
+@media all and (max-width: 1200px) {
+  #quartz-root #quartz-body {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-sidebar-right"
+      "grid-sidebar-left"
+      "grid-footer";
+  }
+
+  #quartz-root .sidebar.left,
+  #quartz-root .sidebar.left .graph,
+  #quartz-root .sidebar.left .graph-outer,
+  #quartz-root .sidebar.left .graph-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #quartz-root .page-header .popover-hint > .flex-component {
+    justify-content: flex-start;
+    padding-left: 2.6rem;
+  }
+
+  #quartz-root .explorer button.mobile-explorer {
+    position: fixed;
+    top: 1.2rem;
+    left: 1rem;
+    z-index: 10;
+    background-color: var(--light);
+    border-radius: 6px;
+    padding: 0.2rem;
+  }
+
+  .recent-notes {
+    display: none;
+  }
+}
+
 body::before {
   content: "";
   position: fixed;
