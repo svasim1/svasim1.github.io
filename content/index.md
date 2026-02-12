@@ -1,6 +1,6 @@
 ---
 publish: true
-title: Svante's Brain
+title: Svante's Digital Garden
 created: 2026-02-12T14:30:21.460+01:00
 modified: 2026-02-12
 tags:
