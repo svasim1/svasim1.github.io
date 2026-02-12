@@ -13,9 +13,6 @@ tags:
 cssclasses: ""
 ---
 
-
-# Cybrawl
-
 A 2D combat game built collaboratively by a group of friends using Unity.
 
 ## Technologies

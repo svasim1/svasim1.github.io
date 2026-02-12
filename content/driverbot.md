@@ -13,23 +13,6 @@ tags:
 cssclasses: ""
 ---
 
----
-publish: true
-title: driverbot
-description: A car that can be remote-controlled via a web interface using MQTT.
-created: 2023-01-01
-modified: 2026-02-12
-tags:
-  - IoT
-  - MQTT
-  - Web Development
-  - JavaScript
-  - Robotics
-cssclasses: ""
----
-
-# driverbot
-
 A car that can be remote-controlled via a web interface using MQTT protocol.
 
 ## Technologies
