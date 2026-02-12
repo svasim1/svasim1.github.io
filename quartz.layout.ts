@@ -35,15 +35,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
-  left: [
-    Component.MobileOnly(Component.Spacer()),
-    Component.Graph(),
-  ],
+  left: [Component.MobileOnly(Component.Spacer()), Component.Graph()],
   right: [
     Component.Explorer({ title: "Notes" }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.RecentNotes(),
   ],
 }
 
@@ -64,9 +60,6 @@ export const defaultListPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
   ],
-  left: [
-    Component.MobileOnly(Component.Spacer()),
-    Component.Graph(),
-  ],
-  right: [Component.Explorer({ title: "Notes" }), Component.Backlinks(), Component.RecentNotes()],
+  left: [Component.MobileOnly(Component.Spacer()), Component.Graph()],
+  right: [Component.Explorer({ title: "Notes" }), Component.Backlinks()],
 }
