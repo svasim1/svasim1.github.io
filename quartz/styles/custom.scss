@@ -145,14 +145,15 @@ a.external .external-icon {
   }
 
   #quartz-root .page-header .popover-hint > .flex-component {
-    justify-content: flex-start;
-    padding-left: 2.6rem;
+    justify-content: flex-end;
+    padding-left: 0;
   }
 
   #quartz-root .explorer button.mobile-explorer {
-    position: fixed;
-    top: 1.2rem;
-    left: 1rem;
+    position: absolute;
+    top: 1.7rem;
+    right: calc(1rem + 2.4rem + 0.75rem + 20px + 0.75rem);
+    left: auto;
     z-index: 10;
     background-color: var(--light);
     border-radius: 6px;

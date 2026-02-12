@@ -158,6 +158,14 @@ button.desktop-explorer {
     padding-left: 0.8rem;
     border-left: 1px solid var(--lightgray);
   }
+
+  .explorer-close {
+    display: none;
+  }
+
+  .explorer-search {
+    display: none;
+  }
 }
 
 .folder-container {
@@ -243,7 +251,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     .explorer-content {
       box-sizing: border-box;
       z-index: 100;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       margin-top: 0;
@@ -255,10 +263,40 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         transform 200ms ease,
         visibility 200ms ease;
       overflow: hidden;
-      padding: 4rem 0 2rem 0;
+      padding: 4rem 1rem 2rem 1rem;
       height: 100dvh;
       max-height: 100dvh;
       visibility: hidden;
+    }
+
+    .explorer-search {
+      display: block;
+      margin: 0 0 0.75rem 0;
+
+      & > .search-button {
+        width: 100%;
+        padding: 0 0.6rem 0 0;
+      }
+    }
+
+    .explorer-close {
+      display: inline-flex;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+
+      & svg {
+        width: 24px;
+        height: 24px;
+        stroke: var(--darkgray);
+        stroke-width: 2.5px;
+      }
     }
 
     .mobile-explorer {

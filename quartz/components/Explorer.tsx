@@ -8,6 +8,7 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import Search from "./Search"
 
 type OrderEntries = "sort" | "filter" | "map"
 
@@ -59,8 +60,10 @@ let numExplorers = 0
 export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
+  const SearchComponent = Search()
 
-  const Explorer: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
+  const Explorer: QuartzComponent = (props: QuartzComponentProps) => {
+    const { cfg, displayClass } = props
     const id = `explorer-${numExplorers++}`
 
     return (
@@ -120,6 +123,27 @@ export default ((userOpts?: Partial<Options>) => {
           </svg>
         </button>
         <div id={id} class="explorer-content" aria-expanded={false} role="group">
+          <button
+            type="button"
+            class="explorer-toggle explorer-close"
+            data-mobile={true}
+            aria-controls={id}
+            aria-label="Close explorer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <SearchComponent {...props} displayClass="mobile-only" />
           <OverflowList class="explorer-ul" />
         </div>
         <template id="template-file">
