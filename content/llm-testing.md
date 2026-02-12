@@ -13,11 +13,6 @@ tags:
 cssclasses: ""
 ---
 
-
-# llm-testing
-
-An LLM (Large Language Model) with Retrieval-Augmented Generation (RAG) backend and API, built in Python.
-
 ## Technologies
 
 - Python
