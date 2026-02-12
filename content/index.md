@@ -2,7 +2,7 @@
 publish: true
 title: Svante's Brain
 created: 2026-02-12T14:30:21.460+01:00
-modified: 2026-02-12T18:26:58.173+01:00
+modified: 2026-02-12T18:33:02.648+01:00
 cssclasses: ""
 ---
 
@@ -15,8 +15,8 @@ I am a committed and curious problem solver who is driven by the possibilities o
 
 ## Featured projects
 
-- [Cybrawl](School%20Projects/Cybrawl)
-- [Driverbot](School%20Projects/driverbot)
-- [LLM testing](School%20Projects/llm-testing)
+- [Cybrawl](Cybrawl.md)
+- [Driverbot](driverbot.md)
+- [LLM testing](llm-testing.md)
 
 During high school, I have been involved in building everything from websites, apps and AI bots to games, drones and physical systems. Examples of projects I have worked on are an AI chatbot with RAG backend in Python, a surgeon simulator developed in collaboration with Region Västmanland, and a radio-controlled vehicle that can be controlled over the network. I was also a web developer in RiksdagsTracker UF, where we took 4th place in the JA company of the year in Västmanland 2025. Last but not least, I have received two awards during high school.

@@ -2,7 +2,7 @@
 publish: true
 title: Cybrawl
 description: 2D combat game built by a group of friends in Unity.
-created: 2023-01-01
+created: 2026-02-12T14:50:59.166+01:00
 modified: 2026-02-12
 tags:
   - game-dev
@@ -28,5 +28,5 @@ Cybrawl is a 2D combat game developed as a collaborative project among friends. 
 
 ## See also
 
-- [Driverbot](driverbot)
-- [LLM testing](llm-testing)
+- [Driverbot](driverbot.md)
+- [LLM testing](llm-testing.md)
