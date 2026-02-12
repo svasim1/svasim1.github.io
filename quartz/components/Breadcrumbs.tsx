@@ -76,14 +76,45 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
       crumbs.pop()
     }
 
+    if (crumbs.length <= 2) {
+      return (
+        <nav class={classNames(displayClass, "breadcrumb-container")} aria-label="breadcrumbs">
+          {crumbs.map((crumb, index) => (
+            <div class="breadcrumb-element">
+              <a href={crumb.path}>{crumb.displayName}</a>
+              {index !== crumbs.length - 1 && <p>{` ${options.spacerSymbol} `}</p>}
+            </div>
+          ))}
+        </nav>
+      )
+    }
+
+    const firstCrumb = crumbs[0]
+    const lastCrumb = crumbs[crumbs.length - 1]
+    const middleCrumbs = crumbs.slice(1, -1)
+
     return (
       <nav class={classNames(displayClass, "breadcrumb-container")} aria-label="breadcrumbs">
-        {crumbs.map((crumb, index) => (
-          <div class="breadcrumb-element">
-            <a href={crumb.path}>{crumb.displayName}</a>
-            {index !== crumbs.length - 1 && <p>{` ${options.spacerSymbol} `}</p>}
-          </div>
-        ))}
+        <div class="breadcrumb-element">
+          <a href={firstCrumb.path}>{firstCrumb.displayName}</a>
+          <p>{` ${options.spacerSymbol} `}</p>
+        </div>
+        <div class="breadcrumb-element breadcrumb-ellipsis">
+          <details>
+            <summary>...</summary>
+            <div class="breadcrumb-ellipsis-menu" role="list">
+              {middleCrumbs.map((crumb) => (
+                <a href={crumb.path} role="listitem">
+                  {crumb.displayName}
+                </a>
+              ))}
+            </div>
+          </details>
+          <p>{` ${options.spacerSymbol} `}</p>
+        </div>
+        <div class="breadcrumb-element">
+          <a href={lastCrumb.path}>{lastCrumb.displayName}</a>
+        </div>
       </nav>
     )
   }

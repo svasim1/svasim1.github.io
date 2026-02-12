@@ -15,31 +15,32 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+    Component.Flex({
+      components: [
+        {
+          Component: Component.ConditionalRender({
+            component: Component.Breadcrumbs(),
+            condition: (page) => page.fileData.slug !== "index",
+          }),
+        },
+        {
+          Component: Component.Spacer(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+        { Component: Component.Search() },
+      ],
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.Explorer(),
+    Component.Graph(),
   ],
   right: [
-    Component.Graph(),
+    Component.Explorer({ title: "Notes" }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -47,20 +48,24 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
+  beforeBody: [
     Component.Flex({
       components: [
+        { Component: Component.Breadcrumbs() },
         {
-          Component: Component.Search(),
+          Component: Component.Spacer(),
           grow: true,
         },
         { Component: Component.Darkmode() },
+        { Component: Component.Search() },
       ],
     }),
-    Component.Explorer(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
   ],
-  right: [],
+  left: [
+    Component.MobileOnly(Component.Spacer()),
+    Component.Graph(),
+  ],
+  right: [Component.Explorer({ title: "Notes" }), Component.Backlinks()],
 }

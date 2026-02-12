@@ -1,3 +1,126 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+:root {
+  --vector-field-color: rgba(40, 75, 99, 0.16);
+  --vector-field-opacity: 0.9;
+}
+
+:root[saved-theme="dark"] {
+  --vector-field-color: rgba(123, 151, 170, 0.18);
+  --vector-field-opacity: 0.7;
+}
+
+body {
+  position: relative;
+}
+
+#quartz-root {
+  position: relative;
+  z-index: 1;
+}
+
+#quartz-root .center {
+  background-color: var(--light);
+  border-radius: 20px;
+  padding: 2rem 2.25rem 2.5rem;
+  width: min(780px, 100%);
+  justify-self: center;
+}
+
+@media all and (min-width: 1200px) {
+  #quartz-root .center {
+    position: relative;
+    left: -60px;
+  }
+
+  #quartz-root .sidebar.left {
+    position: relative;
+    left: -60px;
+  }
+}
+
+#quartz-root .page-header {
+  margin: 0 0 1rem 0;
+}
+
+.page > #quartz-body .page-header {
+  margin: 0 0 1rem 0;
+}
+
+#quartz-root .page-header .popover-hint > .flex-component {
+  justify-content: flex-end;
+  margin: 0 0 1rem 0;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+#quartz-root .page-header .popover-hint > .flex-component .search {
+  max-width: none;
+  min-width: auto;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+#quartz-root .page-header .popover-hint > .flex-component .search-button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#quartz-root .page-header .popover-hint > .flex-component .search-button svg {
+  margin: 0;
+}
+
+#quartz-root .page-header .popover-hint > .flex-component .search-button > p {
+  display: none;
+}
+
+#quartz-root .page-header header .search-button > p {
+  display: none;
+}
+
+#quartz-root .graph > .graph-outer,
+#quartz-root .graph > .graph-outer > .graph-container {
+  background-color: var(--light);
+  opacity: 0.8;
+}
+
+@media all and (max-width: 800px) {
+  #quartz-root .center {
+    border-radius: 16px;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--vector-field-color);
+  opacity: var(--vector-field-opacity);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Cg fill='none' stroke='white' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M0 120 C 200 20, 400 20, 600 120 C 800 220, 1000 220, 1200 120'/%3E%3Cpath d='M0 240 C 220 140, 420 140, 600 240 C 780 340, 980 340, 1200 240'/%3E%3Cpath d='M0 360 C 200 260, 420 260, 600 360 C 780 460, 1000 460, 1200 360'/%3E%3Cpath d='M0 480 C 220 380, 440 380, 600 480 C 760 580, 980 580, 1200 480'/%3E%3C/g%3E%3C/svg%3E");
+  mask-size: 1200px 600px;
+  mask-repeat: repeat;
+  mask-position: 0 0;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600'%3E%3Cg fill='none' stroke='white' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M0 120 C 200 20, 400 20, 600 120 C 800 220, 1000 220, 1200 120'/%3E%3Cpath d='M0 240 C 220 140, 420 140, 600 240 C 780 340, 980 340, 1200 240'/%3E%3Cpath d='M0 360 C 200 260, 420 260, 600 360 C 780 460, 1000 460, 1200 360'/%3E%3Cpath d='M0 480 C 220 380, 440 380, 600 480 C 760 580, 980 580, 1200 480'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-size: 1200px 600px;
+  -webkit-mask-repeat: repeat;
+  -webkit-mask-position: 0 0;
+  animation: vector-field-drift 50s linear infinite;
+  will-change: mask-position;
+}
+
+@keyframes vector-field-drift {
+  from {
+    mask-position: 0 0;
+    -webkit-mask-position: 0 0;
+  }
+  to {
+    mask-position: 1200px -600px;
+    -webkit-mask-position: 1200px -600px;
+  }
+}
