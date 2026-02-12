@@ -21,13 +21,14 @@ This website is built with a very cool framework i recently discovered, [Quartz]
 
 ---
 
-## Featured projects
+### Featured projects
 
 - [Cybrawl](Cybrawl.md)
 - [Driverbot](driverbot.md)
 - [LLM testing](llm-testing.md)
 
 ---
+### Connect with me
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;margin:0.8rem 0;">
   <a href="https://www.linkedin.com/in/svante-ericsson/" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
