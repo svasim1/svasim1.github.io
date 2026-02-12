@@ -52,6 +52,8 @@ body {
   margin: 0 0 1rem 0;
   gap: 0.75rem;
   align-items: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--lightgray);
 }
 
 #quartz-root .page-header .popover-hint > .flex-component .search {
@@ -85,6 +87,29 @@ body {
 #quartz-root .graph > .graph-outer > .graph-container {
   background-color: var(--light);
   opacity: 0.8;
+}
+
+/* Hide header controls inside popover previews */
+.popover .darkmode,
+.popover .search {
+  display: none !important;
+}
+
+/* Make recent notes slimmer */
+.recent-notes > ul.recent-ul {
+  margin-top: 0.5rem;
+}
+
+.recent-notes > ul.recent-ul > li {
+  margin: 0.5rem 0;
+}
+
+.recent-notes .section > .meta {
+  display: none;
+}
+
+.recent-notes .section > .desc > h3 > a {
+  font-size: 0.95rem;
 }
 
 @media all and (max-width: 800px) {

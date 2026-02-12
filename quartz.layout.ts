@@ -43,6 +43,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({ title: "Notes" }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.RecentNotes(),
   ],
 }
 
@@ -67,5 +68,5 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Graph(),
   ],
-  right: [Component.Explorer({ title: "Notes" }), Component.Backlinks()],
+  right: [Component.Explorer({ title: "Notes" }), Component.Backlinks(), Component.RecentNotes()],
 }
