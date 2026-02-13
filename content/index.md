@@ -1,7 +1,7 @@
 ---
 publish: true
 title: Svante's Digital Garden
-created: 2026-02-13T09:28:30.369+01:00
+created: 2026-02-12
 modified: 2026-02-12
 tags:
   - me
