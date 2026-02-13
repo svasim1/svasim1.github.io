@@ -30,4 +30,4 @@ This project implements a Large Language Model with a Retrieval-Augmented Genera
 ## See also
 
 - [Driverbot](driverbot.md)
-- [cybrawl](cybrawl.md)
+- [Cybrawl](cybrawl.md)

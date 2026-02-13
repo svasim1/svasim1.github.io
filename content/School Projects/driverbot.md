@@ -28,5 +28,5 @@ Driverbot is an IoT project that enables remote control of a physical car throug
 
 ## See also
 
-- [cybrawl](cybrawl.md)
+- [Cybrawl](cybrawl.md)
 - [LLM testing](llm-testing.md)
