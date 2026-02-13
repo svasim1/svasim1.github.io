@@ -1,6 +1,6 @@
 ---
 publish: true
-title: llm-testing
+title: LLM-testing
 description: An LLM with Retrieval-Augmented Generation (RAG) backend and API, built in Python.
 created: 2026-02-13T09:28:30.369+01:00
 modified: 2026-02-12
@@ -30,4 +30,4 @@ This project implements a Large Language Model with a Retrieval-Augmented Genera
 ## See also
 
 - [Driverbot](driverbot.md)
-- [Cybrawl](Cybrawl.md)
+- [cybrawl](cybrawl.md)

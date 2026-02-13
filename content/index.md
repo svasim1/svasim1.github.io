@@ -23,7 +23,7 @@ This website is built with a very cool framework I recently discovered, [Quartz]
 
 ### Featured projects
 
-- [Cybrawl](Cybrawl.md)
+- [cybrawl](cybrawl.md)
 - [Driverbot](driverbot.md)
 - [LLM testing](llm-testing.md)
 
