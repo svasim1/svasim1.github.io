@@ -2,7 +2,7 @@
 publish: true
 title: Cybrawl
 description: 2D combat game built by a group of friends in Unity.
-created: 2026-02-12T14:50:59.166+01:00
+created: 2026-02-13T09:28:30.369+01:00
 modified: 2026-02-12
 tags:
   - game-dev

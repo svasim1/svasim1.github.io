@@ -2,7 +2,7 @@
 publish: true
 title: driverbot
 description: A car that can be remote-controlled via a web interface using MQTT.
-created: 2026-02-12T14:50:59.166+01:00
+created: 2026-02-13T09:28:30.369+01:00
 modified: 2026-02-12
 tags:
   - iot
