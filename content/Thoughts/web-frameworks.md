@@ -1,15 +1,12 @@
 ---
-publish: true
 title: Web Frameworks
 description: My thoughts about certain Web Frameworks.
-created: 2026-02-13
-modified: 2026-02-13T10:37:36.932+01:00
 tags:
   - thoughts
   - web
-cssclasses: ""
+date: 2026-02-13
+publish: true
 ---
-
 During the last few years I've tried out a few different frameworks for Web Development. Here are my takes on some of the frameworks and what I think about them.
 
 ### [Vue.js](https://vuejs.org/)
