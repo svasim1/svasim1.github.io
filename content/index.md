@@ -34,7 +34,7 @@ This website is built with [Quartz](https://quartz.jzhao.xyz/). Feel free to exp
 ---
 ### Connect with me
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;margin:0.8rem 0;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.8rem;margin:0.8rem 0;">
   <a href="https://www.linkedin.com/in/svante-ericsson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
     <div style="font-weight:700;letter-spacing:0.02em;">LinkedIn</div>
     <div style="opacity:0.8;">Work, awards, and highlights</div>
@@ -46,5 +46,9 @@ This website is built with [Quartz](https://quartz.jzhao.xyz/). Feel free to exp
   <a href="https://www.instagram.com/svante.ericsson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
     <div style="font-weight:700;letter-spacing:0.02em;">Instagram</div>
     <div style="opacity:0.8;">Behind the scenes</div>
+  </a>
+  <a href="mailto:me@svasim.se" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
+    <div style="font-weight:700;letter-spacing:0.02em;">Mail</div>
+    <div style="opacity:0.8;">me@svasim.se</div>
   </a>
 </div>
