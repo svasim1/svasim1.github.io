@@ -9,7 +9,7 @@ cssclasses: ""
 ---
 
 
-Hi, my name is Svante Ericsson, I am 20 years old and this is my personal website where I share my projects, thoughts and experiences in the world of technology. I am passionate about innovation and constantly exploring new ideas and solutions to shape the future.
+I'm 20 years old and this is my personal website, where I share my projects, thoughts and experiences in the world of technology. I am passionate about innovation and constantly exploring new ideas and solutions to shape the future.
 
 I graduated in 2025 from the [technology specialization](https://vasteras.hitachigymnasiet.se/utbildning-teknikprogrammet/teknikspets) program at [Hitachigymnasiet](https://vasteras.hitachigymnasiet.se/) (formerly ABB-gymnasiet) in Västerås, where I had the opportunity to deepen my knowledge in programming, AI, IoT, cloud services and modern product development. At Hitachigymnasiet I have been involved in building everything from websites, apps and AI to games, drones and physical systems. Examples of projects I have worked on are an [AI chatbot with RAG backend in Python](llm-testing.md), a [surgeon simulator](https://github.com/abbindustrigymnasium/VRregVast) developed in collaboration with [Region Västmanland](https://regionvastmanland.se/), and a [radio-controlled vehicle](driverbot.md) that can be controlled over the network. I was also a web developer in RiksdagsTracker UF, where we took 4th place in the JA company of the year in Västmanland 2025. [AI Sweden](https://www.ai.se/en) recognized [my work](llm-testing.md) and awarded me, and I also received an award for being a role model for other students.
 
