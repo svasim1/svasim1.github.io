@@ -21,15 +21,15 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#faf7f5"
+        lightgray: "#e8e2de"
+        gray: "#b0a7a3"
+        darkgray: "#4a4346"
+        dark: "#211d1f"
+        secondary: "#a8532f"
+        tertiary: "#557a6d"
+        highlight: rgba(200, 122, 90, 0.14)
+        textHighlight: "#f4d56a88"
       darkMode:
         light: "#141416"
         lightgray: "#2d2b2f"
@@ -227,11 +227,13 @@ plugins:
       position: afterBody
       priority: 10
   - source: "@quartz-community/footer"
-    enabled: false
+    enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        LinkedIn: https://www.linkedin.com/in/svante-ericsson/
+        GitHub: https://github.com/svasim1
+        Instagram: https://www.instagram.com/svante.ericsson/
+        Email: mailto:me@svasim.se
     layout:
       position: footer
       priority: 50

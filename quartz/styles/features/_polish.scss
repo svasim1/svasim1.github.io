@@ -1,0 +1,40 @@
+// Step 6: small visual touches
+
+// accent-tinted text selection
+::selection {
+  background: var(--highlight);
+  color: var(--dark);
+}
+
+// visible keyboard focus in the accent color
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+// external links in notes get an underline that grows in on hover
+article a.external {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+// headings get a little more presence
+article h2 {
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article a.external {
+    transition: none;
+  }
+}

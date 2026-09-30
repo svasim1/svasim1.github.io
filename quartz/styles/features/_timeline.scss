@@ -1,0 +1,102 @@
+// Step 7: experience timeline
+// In Obsidian: a "> [!timeline] Title" callout containing a list.
+// "**date**" at the start of an item becomes the date label,
+// a nested list under an item becomes its description.
+
+.callout.timeline {
+  --timeline-dot: 11px;
+
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  // callouts clip their content; the dots sit on the line's edge
+  overflow: visible;
+
+  & > .callout-title {
+    padding: 0;
+    margin-bottom: 1rem;
+
+    .callout-icon {
+      display: none;
+    }
+
+    .callout-title-inner,
+    .callout-title-inner p {
+      font-family: var(--headerFont);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 0;
+    }
+  }
+
+  & > .callout-content {
+    padding: 0 0 0 calc(var(--timeline-dot) / 2);
+    background: none;
+    overflow: visible;
+
+    & > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 1.6rem;
+      border-left: 1px solid var(--lightgray);
+
+      & > li {
+        position: relative;
+        margin: 0 0 1.4rem;
+        padding: 0;
+        color: var(--dark);
+        font-weight: 600;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        // dot on the line
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0.45rem;
+          left: calc(-1.6rem - var(--timeline-dot) / 2 - 0.5px);
+          width: var(--timeline-dot);
+          height: var(--timeline-dot);
+          box-sizing: border-box;
+          border-radius: 50%;
+          border: 2px solid var(--secondary);
+          background: var(--light);
+        }
+
+        &:first-child::before {
+          background: var(--secondary);
+        }
+
+        // date label
+        & > strong:first-child {
+          display: block;
+          margin-bottom: 0.1rem;
+          font-family: var(--headerFont);
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--secondary);
+        }
+
+        // description
+        & > ul {
+          list-style: none;
+          margin: 0.25rem 0 0;
+          padding: 0;
+
+          & > li {
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+            color: var(--darkgray);
+          }
+        }
+      }
+    }
+  }
+}

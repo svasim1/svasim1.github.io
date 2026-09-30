@@ -1,7 +1,12 @@
 @use "./variables.scss" as *;
+@use "./features/polish";
+@use "./features/timeline";
+@use "./features/tag-icons";
+@use "./features/footer";
+@use "./features/not-found";
 
 :root {
-  --vector-field-color: rgba(40, 75, 99, 0.16);
+  --vector-field-color: rgba(168, 83, 47, 0.14);
   --vector-field-opacity: 0.9;
 }
 

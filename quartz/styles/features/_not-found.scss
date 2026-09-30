@@ -1,0 +1,50 @@
+// Step 10: 404 page
+
+body[data-slug="404"] {
+  // no content card here, so the background animation shows behind the text
+  #quartz-root .center.minimal {
+    background: transparent;
+  }
+
+  .center.minimal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+
+  article {
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      font-size: clamp(6rem, 22vw, 11rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--secondary);
+    }
+
+    p {
+      margin: 1rem 0 2rem;
+      font-size: 1.15rem;
+      color: var(--darkgray);
+    }
+
+    // same look as the primary button in the homepage hero
+    & > a {
+      display: inline-block;
+      padding: 0.6rem 1.1rem;
+      border-radius: 4px;
+      background: var(--secondary);
+      color: var(--light);
+      font-family: var(--headerFont);
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+
+      &:hover {
+        opacity: 0.88;
+      }
+    }
+  }
+}
