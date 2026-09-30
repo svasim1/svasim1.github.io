@@ -1,0 +1,129 @@
+import type {
+  QuartzComponent,
+  QuartzComponentConstructor,
+  QuartzComponentProps,
+} from "@quartz-community/types";
+import { classNames } from "../util/lang";
+import { resolveRelative, simplifySlug } from "../util/path";
+import { FileTrieNode, trieFromAllFiles } from "../util/fileTrie";
+import style from "./styles/breadcrumbs.scss";
+
+type CrumbData = {
+  displayName: string;
+  path: string;
+};
+
+export interface BreadcrumbOptions {
+  /** Symbol between crumbs */
+  spacerSymbol: string;
+  /** Name of first crumb */
+  rootName: string;
+  /** Whether to look up frontmatter title for folders */
+  resolveFrontmatterTitle: boolean;
+  /** Whether to display the current page in the breadcrumbs */
+  showCurrentPage: boolean;
+}
+
+const defaultOptions: BreadcrumbOptions = {
+  spacerSymbol: "❯",
+  rootName: "Home",
+  resolveFrontmatterTitle: true,
+  showCurrentPage: true,
+};
+
+function formatCrumb(displayName: string, baseSlug: string, currentSlug: string): CrumbData {
+  return {
+    displayName,
+    path: resolveRelative(baseSlug, currentSlug),
+  };
+}
+
+export default ((opts?: Partial<BreadcrumbOptions>) => {
+  const options: BreadcrumbOptions = { ...defaultOptions, ...opts };
+  const Breadcrumbs: QuartzComponent = ({
+    fileData,
+    allFiles,
+    displayClass,
+    ctx,
+  }: QuartzComponentProps) => {
+    const typedCtx = (ctx ?? {}) as Record<string, unknown> as { trie?: FileTrieNode };
+    typedCtx.trie ??= trieFromAllFiles(
+      allFiles as Array<{
+        slug?: string;
+        filePath?: string;
+        frontmatter?: { title?: string; [key: string]: unknown };
+      }>,
+    );
+    const trie = typedCtx.trie;
+    const slug = fileData.slug as string;
+    const slugParts = slug.split("/");
+    const pathNodes = trie.ancestryChain(slugParts);
+
+    if (!pathNodes) {
+      return null;
+    }
+
+    const crumbs: CrumbData[] = pathNodes.map((node, idx) => {
+      const crumb = formatCrumb(node.displayName, slug, simplifySlug(node.slug));
+      if (idx === 0) {
+        crumb.displayName = options.rootName;
+      }
+
+      if (idx === pathNodes.length - 1) {
+        crumb.path = "";
+      }
+
+      return crumb;
+    });
+
+    if (!options.showCurrentPage) {
+      crumbs.pop();
+    }
+
+    if (crumbs.length <= 2) {
+      return (
+        <nav class={classNames(displayClass, "breadcrumb-container")} aria-label="breadcrumbs">
+          {crumbs.map((crumb, index) => (
+            <div class="breadcrumb-element">
+              <a href={crumb.path}>{crumb.displayName}</a>
+              {index !== crumbs.length - 1 && <p>{` ${options.spacerSymbol} `}</p>}
+            </div>
+          ))}
+        </nav>
+      );
+    }
+
+    // Collapse the middle of long trails into a "..." dropdown
+    const firstCrumb = crumbs[0]!;
+    const lastCrumb = crumbs[crumbs.length - 1]!;
+    const middleCrumbs = crumbs.slice(1, -1);
+
+    return (
+      <nav class={classNames(displayClass, "breadcrumb-container")} aria-label="breadcrumbs">
+        <div class="breadcrumb-element">
+          <a href={firstCrumb.path}>{firstCrumb.displayName}</a>
+          <p>{` ${options.spacerSymbol} `}</p>
+        </div>
+        <div class="breadcrumb-element breadcrumb-ellipsis">
+          <details>
+            <summary>...</summary>
+            <div class="breadcrumb-ellipsis-menu" role="list">
+              {middleCrumbs.map((crumb) => (
+                <a href={crumb.path} role="listitem">
+                  {crumb.displayName}
+                </a>
+              ))}
+            </div>
+          </details>
+          <p>{` ${options.spacerSymbol} `}</p>
+        </div>
+        <div class="breadcrumb-element">
+          <a href={lastCrumb.path}>{lastCrumb.displayName}</a>
+        </div>
+      </nav>
+    );
+  };
+  Breadcrumbs.css = style;
+
+  return Breadcrumbs;
+}) satisfies QuartzComponentConstructor;
