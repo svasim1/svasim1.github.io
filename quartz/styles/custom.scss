@@ -33,6 +33,14 @@ body {
   justify-self: center;
 }
 
+/* Below desktop width the card fills its column, so include the padding in
+   that width; otherwise it sticks out and the page scrolls sideways */
+@media all and (max-width: 1200px) {
+  #quartz-root .center {
+    box-sizing: border-box;
+  }
+}
+
 @media all and (min-width: 1200px) {
   #quartz-root .center {
     position: relative;
