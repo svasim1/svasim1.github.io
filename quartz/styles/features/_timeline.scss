@@ -1,5 +1,5 @@
 // Step 7: experience timeline
-// In Obsidian: a "> [!timeline] Title" callout containing a list.
+// In Obsidian: a "> [!timeline]" callout containing a list, under a heading.
 // "**date**" at the start of an item becomes the date label,
 // a nested list under an item becomes its description.
 
@@ -13,22 +13,9 @@
   // callouts clip their content; the dots sit on the line's edge
   overflow: visible;
 
+  // the note's own heading above the callout is the title
   & > .callout-title {
-    padding: 0;
-    margin-bottom: 1rem;
-
-    .callout-icon {
-      display: none;
-    }
-
-    .callout-title-inner,
-    .callout-title-inner p {
-      font-family: var(--headerFont);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin: 0;
-    }
+    display: none;
   }
 
   & > .callout-content {
