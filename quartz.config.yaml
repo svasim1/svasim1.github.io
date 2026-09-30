@@ -204,6 +204,11 @@ plugins:
     layout:
       position: beforeBody
       priority: 8
+  - source: ./plugins/flow-field
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 100
   - source: ./plugins/breadcrumbs
     enabled: true
     layout:

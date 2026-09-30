@@ -209,3 +209,10 @@ article + hr {
     display: none;
   }
 }
+
+/* Keep the static wave background still for visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
+}

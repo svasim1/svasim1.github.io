@@ -1,0 +1,13 @@
+.flow-field-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+// the canvas replaces the static CSS wave background while it runs
+html.flow-field-active body::before {
+  display: none;
+}
