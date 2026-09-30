@@ -36,6 +36,8 @@ body {
   #quartz-root .sidebar.left {
     position: relative;
     left: -60px;
+    /* compensate the shift so the graph and recent notes aren't cut off */
+    padding-left: calc(60px + 1rem);
   }
 }
 
