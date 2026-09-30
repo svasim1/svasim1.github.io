@@ -32,19 +32,25 @@ This website is built with [Quartz](https://quartz.jzhao.xyz/). Feel free to exp
 - [LLM testing](llm-testing.md)
 
 ---
+
+### Timeline
+[!timeline] Experience
+> - **2026 - now** Data Center Technician at [Amazon Web Services](https://aws.amazon.com/)
+>   - Part of the team keeping the infrastructure running that powers the cloud, in Västerås.
+> - **2025 - 2026** Upper secondary school engineer, [NTI Gymnasiet](https://ntigymnasiet.se/vasteras/)
+>   - Certified in software design, plus part-time work at an AI startup.
+> - **2025 - 2026** Chief Technology Officer at [Triljon](https://triljon.com/)
+>   - Fintech startup connecting investors and startups. Also took Python and Linux courses at [Mälardalens University](https://www.mdu.se/).
+> - **2024 - 2025** Web developer at RiksdagsTracker UF
+>   - 4th place in JA company of the year, Västmanland 2025.
+> - **2022 - 2025** Technology specialization, [Hitachigymnasiet](https://vasteras.hitachigymnasiet.se/)
+>   - Programming, AI, IoT and cloud. Recognized by [AI Sweden](https://www.ai.se/en) for [my work](llm-testing.md).
+
+---
 ### Connect with me
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;margin:0.8rem 0;">
-  <a href="https://www.linkedin.com/in/svante-ericsson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
-    <div style="font-weight:700;letter-spacing:0.02em;">LinkedIn</div>
-    <div style="opacity:0.8;">Work, awards, and highlights</div>
-  </a>
-  <a href="https://github.com/svasim1" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(138,163,155,0.15),rgba(200,122,90,0.15));">
-    <div style="font-weight:700;letter-spacing:0.02em;">GitHub</div>
-    <div style="opacity:0.8;">Projects and experiments</div>
-  </a>
-  <a href="https://www.instagram.com/svante.ericsson/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;border:1px solid var(--lightgray);border-radius:12px;padding:0.9rem 1rem;display:block;background:linear-gradient(135deg,rgba(200,122,90,0.15),rgba(138,163,155,0.15));">
-    <div style="font-weight:700;letter-spacing:0.02em;">Instagram</div>
-    <div style="opacity:0.8;">Behind the scenes</div>
-  </a>
-</div>
+> [!contact]
+> - [LinkedIn](https://www.linkedin.com/in/svante-ericsson/) Work, awards and highlights
+> - [GitHub](https://github.com/svasim1) Projects and experiments
+> - [Instagram](https://www.instagram.com/svante.ericsson/) Behind the scenes
+> - [Email](mailto:me@svasim.se) me@svasim.se
