@@ -188,6 +188,22 @@ plugins:
       position: left
       priority: 35
       group: toolbar
+  - source: ./plugins/hero
+    enabled: true
+    options:
+      kicker: Hi, I'm
+      name: Svante Ericsson
+      tagline: Data Center Technician at Amazon Web Services.
+      location: Västerås, Sweden
+      links:
+        - label: See my projects
+          href: "#featured-projects"
+          style: primary
+        - label: Get in touch
+          href: "#connect-with-me"
+    layout:
+      position: beforeBody
+      priority: 8
   - source: ./plugins/breadcrumbs
     enabled: true
     layout:
