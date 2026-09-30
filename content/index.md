@@ -34,7 +34,8 @@ This website is built with [Quartz](https://quartz.jzhao.xyz/). Feel free to exp
 ---
 
 ### Timeline
-[!timeline] Experience
+
+> [!timeline] Experience
 > - **2026 - now** Data Center Technician at [Amazon Web Services](https://aws.amazon.com/)
 >   - Part of the team keeping the infrastructure running that powers the cloud, in Västerås.
 > - **2025 - 2026** Upper secondary school engineer, [NTI Gymnasiet](https://ntigymnasiet.se/vasteras/)
