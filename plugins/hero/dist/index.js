@@ -71,6 +71,16 @@ var Hero_default = ((opts) => {
     ] });
   };
   Hero.css = hero_default;
+  Hero.afterDOMLoaded = `
+    function openContactLinksInNewTab() {
+      document.querySelectorAll('.callout.contact a[href^="http"]').forEach((a) => {
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+      });
+    }
+    document.addEventListener("nav", openContactLinksInNewTab);
+    openContactLinksInNewTab();
+  `;
   return Hero;
 });
 

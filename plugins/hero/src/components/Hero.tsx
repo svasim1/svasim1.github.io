@@ -79,5 +79,16 @@ export default ((opts?: Partial<HeroOptions>) => {
   };
 
   Hero.css = style;
+  // links in the "> [!contact]" callout open in a new tab (not mailto:)
+  Hero.afterDOMLoaded = `
+    function openContactLinksInNewTab() {
+      document.querySelectorAll('.callout.contact a[href^="http"]').forEach((a) => {
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+      });
+    }
+    document.addEventListener("nav", openContactLinksInNewTab);
+    openContactLinksInNewTab();
+  `;
   return Hero;
 }) satisfies QuartzComponentConstructor;
