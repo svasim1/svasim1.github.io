@@ -142,6 +142,10 @@ plugins:
       priority: 10
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+      # the sidebar graph also shows links of links, so it looks fuller
+      localGraph:
+        depth: 2
     layout:
       position: left
       priority: 10
