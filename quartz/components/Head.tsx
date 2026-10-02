@@ -12,7 +12,8 @@ export default (() => {
     externalResources,
     ctx,
   }: QuartzComponentProps) => {
-    const titleSuffix = cfg.pageTitleSuffix ?? ""
+    // the homepage title stands on its own, without the suffix
+    const titleSuffix = fileData.slug === "index" ? "" : (cfg.pageTitleSuffix ?? "")
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
     const description =

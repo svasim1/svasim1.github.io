@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Svante's Digital Garden
-  pageTitleSuffix: ""
+  pageTitle: Svante Ericsson
+  pageTitleSuffix: " | Svante Ericsson"
   enableSPA: true
   enablePopovers: true
   analytics:
@@ -209,6 +209,20 @@ plugins:
     layout:
       position: afterBody
       priority: 100
+  - source: ./plugins/seo
+    enabled: true
+    options:
+      googleSiteVerification: MpgwORobzmT_cpeaJH4pzCkHL0w1bKmg-N7rj6fkwRw
+      person:
+        name: Svante Ericsson
+        jobTitle: Data Center Technician
+        worksFor: Amazon Web Services
+        location: Västerås, Sweden
+        email: mailto:me@svasim.se
+        sameAs:
+          - https://www.linkedin.com/in/svante-ericsson/
+          - https://github.com/svasim1
+          - https://www.instagram.com/svante.ericsson/
   - source: ./plugins/breadcrumbs
     enabled: true
     layout:
