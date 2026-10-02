@@ -11,8 +11,9 @@ tags:
 cssclasses: ""
 ---
 
-A 2D combat game built collaboratively by a group of friends using Unity.
+![[Attachments/cybrawl.png|Cybrawl Logo]]
 
+A 2D combat game built collaboratively by a group of friends using Unity.
 ## Technologies
 
 - Unity

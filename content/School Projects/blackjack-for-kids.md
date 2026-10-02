@@ -3,12 +3,14 @@ publish: true
 title: Blackjack for Kids
 description: A fun and educational blackjack game designed with a playful Candy Crush theme specifically tailored for children. It aims to provide an entertaining way for kids to learn basic arithmetic skills while having a blast!
 created: 2024-02-14
-modified: 2026-09-26T12:36:17.026+02:00
+modified: 2026-10-02T12:17:11.367+02:00
 tags:
   - web
   - collaboration
 cssclasses: ""
 ---
+
+![[Attachments/blackjack-for-kids-banner.webp|Blackjack for Kids Banner]]
 
 A simple blackjack game made in plain HTML, JS and CSS. This game was developed for learning modular scripting and it features a fully working blackjack game.
 

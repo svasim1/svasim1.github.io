@@ -26,6 +26,7 @@ A car that can be remote-controlled via a web interface using MQTT protocol.
 
 Driverbot is an IoT project that enables remote control of a physical car through a web-based interface. Using MQTT (Message Queuing Telemetry Transport) protocol, the system provides real-time communication between the web interface and the vehicle, allowing users to control the car from anywhere with an internet connection.
 
+![[Attachments/driverbot-controls.webp|Driverbot web controls]]
 ## See also
 
 - [Cybrawl](cybrawl.md)
