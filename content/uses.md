@@ -2,8 +2,8 @@
 publish: true
 title: Uses
 description: The hardware, software and setup I use every day.
-created: 1970-01-01
-modified: 2026-10-02T16:01:15.930+02:00
+created: 2026-10-02T15:56:43.446+02:00
+modified: 2026-10-02T16:35:31.332+02:00
 cssclasses: ""
 ---
 

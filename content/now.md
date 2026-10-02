@@ -2,8 +2,8 @@
 publish: true
 title: Now
 description: What I'm focused on right now.
-created: 1970-01-01
-modified: 2026-10-02T15:56:36.066+02:00
+created: 2026-10-02T15:55:02.729+02:00
+modified: 2026-10-02T16:35:34.661+02:00
 cssclasses: ""
 ---
 
