@@ -1,0 +1,136 @@
+// The cards replace the default folder listing
+body:has(.project-cards) .page-listing {
+  display: none;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 0.5rem 0 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  background-color: var(--light);
+  color: var(--darkgray);
+  font-weight: normal;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+
+    .project-card-title {
+      color: var(--secondary);
+    }
+
+    .project-card-cover img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.project-card-cover {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--lightgray);
+  background: var(--lightgray);
+
+  // a blurred copy of the image fills the space around it
+  &:not(.placeholder)::before {
+    content: "";
+    position: absolute;
+    inset: -24px;
+    background: var(--cover) center / cover no-repeat;
+    filter: blur(18px) brightness(0.75);
+  }
+
+  // the whole image stays visible, so wide logos and banners aren't cropped
+  img {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    object-fit: contain;
+    border-radius: 0;
+    transition: transform 0.3s ease;
+  }
+
+  // generated cover when the note has no image
+  &.placeholder {
+    background:
+      radial-gradient(
+        circle at 20% 15%,
+        color-mix(in srgb, var(--c1) 45%, transparent),
+        transparent 60%
+      ),
+      linear-gradient(135deg, var(--c2), var(--light));
+
+    // same wave motif as the page background
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--c1);
+      opacity: 0.25;
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Cg fill='none' stroke='white' stroke-width='1.2'%3E%3Cpath d='M0 45 C 55 15, 105 15, 160 45 C 215 75, 265 75, 320 45'/%3E%3Cpath d='M0 90 C 55 60, 105 60, 160 90 C 215 120, 265 120, 320 90'/%3E%3Cpath d='M0 135 C 55 105, 105 105, 160 135 C 215 165, 265 165, 320 135'/%3E%3C/g%3E%3C/svg%3E");
+      mask-size: cover;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180' viewBox='0 0 320 180'%3E%3Cg fill='none' stroke='white' stroke-width='1.2'%3E%3Cpath d='M0 45 C 55 15, 105 15, 160 45 C 215 75, 265 75, 320 45'/%3E%3Cpath d='M0 90 C 55 60, 105 60, 160 90 C 215 120, 265 120, 320 90'/%3E%3Cpath d='M0 135 C 55 105, 105 105, 160 135 C 215 165, 265 165, 320 135'/%3E%3C/g%3E%3C/svg%3E");
+      -webkit-mask-size: cover;
+    }
+  }
+}
+
+.project-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.9rem 1rem 1rem;
+}
+
+.project-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--dark);
+  transition: color 0.15s ease;
+}
+
+.project-card-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+.project-card-tags {
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card:hover .project-card-cover img {
+    transform: none;
+  }
+}

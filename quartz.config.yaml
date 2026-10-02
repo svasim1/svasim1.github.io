@@ -225,6 +225,11 @@ plugins:
           - https://www.linkedin.com/in/svante-ericsson/
           - https://github.com/svasim1
           - https://www.instagram.com/svante.ericsson/
+  - source: ./plugins/project-cards
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 5
   - source: ./plugins/breadcrumbs
     enabled: true
     layout:
