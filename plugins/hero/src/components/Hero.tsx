@@ -8,8 +8,13 @@ import style from "./styles/hero.scss";
 export interface HeroLink {
   label: string;
   href: string;
-  /** "primary" renders a filled button, anything else an outlined one */
-  style?: "primary" | "secondary";
+  /**
+   * "primary" renders a filled button, "subtle" a small muted link
+   * (e.g. for a CV), anything else an underlined text link
+   */
+  style?: "primary" | "secondary" | "subtle";
+  /** Open the link in a new tab */
+  newTab?: boolean;
 }
 
 export interface HeroOptions {
@@ -67,7 +72,8 @@ export default ((opts?: Partial<HeroOptions>) => {
             {options.links.map((link) => (
               <a
                 href={link.href}
-                class={`hero-button ${link.style === "primary" ? "primary" : "secondary"}`}
+                {...(link.newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                class={`hero-button ${link.style === "primary" || link.style === "subtle" ? link.style : "secondary"}`}
               >
                 {link.label}
               </a>
@@ -89,6 +95,45 @@ export default ((opts?: Partial<HeroOptions>) => {
     }
     document.addEventListener("nav", openContactLinksInNewTab);
     openContactLinksInNewTab();
+
+    // TL;DR toggle: a "> [!short]" and a "> [!story]" callout on the same page
+    // are shown one at a time, with a switch above them. Without JavaScript
+    // both stay visible.
+    function setupBioToggle() {
+      const article = document.querySelector("article");
+      const short = article && article.querySelector(".callout.short");
+      const story = article && article.querySelector(".callout.story");
+      if (!short || !story || article.querySelector(".bio-toggle")) return;
+
+      const toggle = document.createElement("div");
+      toggle.className = "bio-toggle";
+      toggle.setAttribute("role", "group");
+      toggle.setAttribute("aria-label", "Bio length");
+      const options = [["short", "TL;DR"], ["story", "Full story"]];
+      const buttons = options.map(([mode, label]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = label;
+        button.dataset.mode = mode;
+        button.addEventListener("click", () => setMode(mode));
+        toggle.appendChild(button);
+        return button;
+      });
+
+      function setMode(mode) {
+        article.dataset.bio = mode;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
+        try { localStorage.setItem("bio-mode", mode); } catch {}
+      }
+
+      const first = short.compareDocumentPosition(story) & Node.DOCUMENT_POSITION_FOLLOWING ? short : story;
+      first.before(toggle);
+      let saved = null;
+      try { saved = localStorage.getItem("bio-mode"); } catch {}
+      setMode(saved === "story" ? "story" : "short");
+    }
+    document.addEventListener("nav", setupBioToggle);
+    setupBioToggle();
 
     // The graph sizes its canvas once, from its box's width at load time.
     // When the width changes (window resize, rotating a phone), ask the

@@ -134,3 +134,35 @@ body:has(.project-cards) .page-listing {
     transform: none;
   }
 }
+
+// Featured projects: a "> [!featured]" callout whose link list becomes cards
+.featured-cards-source {
+  display: none;
+}
+
+.callout.featured {
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  overflow: visible;
+
+  & > .callout-title {
+    display: none;
+  }
+
+  & > .callout-content {
+    padding: 0;
+    background: none;
+    overflow: visible;
+
+    // the plain list stays as a fallback without JavaScript
+    &.has-cards > ul {
+      display: none;
+    }
+
+    .project-cards {
+      margin: 0.75rem 0 1rem;
+    }
+  }
+}

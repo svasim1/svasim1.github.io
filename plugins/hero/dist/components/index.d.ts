@@ -3,8 +3,13 @@ import { QuartzComponent } from '@quartz-community/types';
 interface HeroLink {
     label: string;
     href: string;
-    /** "primary" renders a filled button, anything else an outlined one */
-    style?: "primary" | "secondary";
+    /**
+     * "primary" renders a filled button, "subtle" a small muted link
+     * (e.g. for a CV), anything else an underlined text link
+     */
+    style?: "primary" | "secondary" | "subtle";
+    /** Open the link in a new tab */
+    newTab?: boolean;
 }
 interface HeroOptions {
     /** Small line above the name */

@@ -209,6 +209,10 @@ plugins:
           style: primary
         - label: Get in touch
           href: "#connect-with-me"
+        - label: CV
+          href: /static/svante-ericsson-cv.pdf
+          style: subtle
+          newTab: true
     layout:
       position: beforeBody
       priority: 8
@@ -257,6 +261,8 @@ plugins:
     enabled: true
     options:
       links:
+        Now: /now
+        Uses: /uses
         LinkedIn: https://www.linkedin.com/in/svante-ericsson/
         GitHub: https://github.com/svasim1
         Instagram: https://www.instagram.com/svante.ericsson/

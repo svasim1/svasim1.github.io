@@ -168,6 +168,31 @@ var project_cards_default = `body:has(.project-cards) .page-listing {
   .project-card:hover .project-card-cover img {
     transform: none;
   }
+}
+.featured-cards-source {
+  display: none;
+}
+
+.callout.featured {
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  overflow: visible;
+}
+.callout.featured > .callout-title {
+  display: none;
+}
+.callout.featured > .callout-content {
+  padding: 0;
+  background: none;
+  overflow: visible;
+}
+.callout.featured > .callout-content.has-cards > ul {
+  display: none;
+}
+.callout.featured > .callout-content .project-cards {
+  margin: 0.75rem 0 1rem;
 }`;
 var l;
 l = { __e: function(n2, l2, u3, t2) {
@@ -224,6 +249,27 @@ function firstImageSrc(node) {
   }
   return void 0;
 }
+var prop = (node, camel, dashed) => node.properties?.[camel] ?? node.properties?.[dashed];
+function featuredLinks(root) {
+  const slugs = [];
+  const collect = (node) => {
+    const linked = prop(node, "dataSlug", "data-slug");
+    if (node.tagName === "a" && typeof linked === "string" && !slugs.includes(linked)) {
+      slugs.push(linked);
+    }
+    node.children?.forEach(collect);
+  };
+  const find = (node) => {
+    if (!node) return;
+    if (node.tagName === "blockquote" && prop(node, "dataCallout", "data-callout") === "featured") {
+      collect(node);
+      return;
+    }
+    node.children?.forEach(find);
+  };
+  find(root);
+  return slugs;
+}
 var isAbsolute = (src) => /^[a-z][a-z0-9+.-]*:/i.test(src) || src.startsWith("//");
 function coverFor(page, fm, folderSlug) {
   const toRoot = pathToRoot(folderSlug);
@@ -239,9 +285,43 @@ function coverFor(page, fm, folderSlug) {
 }
 var ProjectCards_default = ((opts) => {
   const options = { ...defaultOptions, ...opts };
+  const renderCard = (page, fromSlug) => {
+    const fm = page.frontmatter ?? {};
+    const title = fm.title ?? page.slug;
+    const href = resolveRelative(fromSlug, page.slug);
+    const tags = (fm.tags ?? []).slice(0, options.maxTags);
+    const date = pageDate(page);
+    const image = coverFor(page, fm, fromSlug);
+    const [c1, c2] = PALETTES[hash(title) % PALETTES.length];
+    return /* @__PURE__ */ u2("a", { href, class: "project-card", children: [
+      /* @__PURE__ */ u2(
+        "div",
+        {
+          class: `project-card-cover${image ? "" : " placeholder"}`,
+          style: image ? `--cover: url("${image}");` : `--c1: ${c1}; --c2: ${c2};`,
+          children: image && /* @__PURE__ */ u2("img", { src: image, alt: "", loading: "lazy" })
+        }
+      ),
+      /* @__PURE__ */ u2("div", { class: "project-card-body", children: [
+        /* @__PURE__ */ u2("h3", { class: "project-card-title", children: title }),
+        fm.description && /* @__PURE__ */ u2("p", { class: "project-card-desc", children: fm.description }),
+        /* @__PURE__ */ u2("div", { class: "project-card-footer", children: [
+          tags.length > 0 && /* @__PURE__ */ u2("span", { class: "project-card-tags", children: tags.map((tag) => `#${tag}`).join("  ") }),
+          options.showDate && date && /* @__PURE__ */ u2("span", { class: "project-card-date", children: date.getFullYear() })
+        ] })
+      ] })
+    ] });
+  };
   const ProjectCards = ({ fileData, allFiles }) => {
     const slug2 = fileData.slug;
-    if (!slug2 || slug2 === "index" || !slug2.endsWith("/index")) {
+    if (!slug2) return null;
+    const featuredSlugs = featuredLinks(fileData.htmlAst);
+    if (featuredSlugs.length > 0) {
+      const featured = featuredSlugs.map((s2) => allFiles.find((page) => page.slug === s2)).filter((page) => page !== void 0);
+      if (featured.length === 0) return null;
+      return /* @__PURE__ */ u2("div", { class: "project-cards featured-cards-source", children: featured.map((page) => renderCard(page, slug2)) });
+    }
+    if (slug2 === "index" || !slug2.endsWith("/index")) {
       return null;
     }
     const folder = slug2.slice(0, -"index".length);
@@ -253,35 +333,21 @@ var ProjectCards_default = ((opts) => {
     if (pages.length === 0) {
       return null;
     }
-    return /* @__PURE__ */ u2("div", { class: "project-cards", children: pages.map((page) => {
-      const fm = page.frontmatter ?? {};
-      const title = fm.title ?? page.slug;
-      const href = resolveRelative(slug2, page.slug);
-      const tags = (fm.tags ?? []).slice(0, options.maxTags);
-      const date = pageDate(page);
-      const image = coverFor(page, fm, slug2);
-      const [c1, c2] = PALETTES[hash(title) % PALETTES.length];
-      return /* @__PURE__ */ u2("a", { href, class: "project-card", children: [
-        /* @__PURE__ */ u2(
-          "div",
-          {
-            class: `project-card-cover${image ? "" : " placeholder"}`,
-            style: image ? `--cover: url("${image}");` : `--c1: ${c1}; --c2: ${c2};`,
-            children: image && /* @__PURE__ */ u2("img", { src: image, alt: "", loading: "lazy" })
-          }
-        ),
-        /* @__PURE__ */ u2("div", { class: "project-card-body", children: [
-          /* @__PURE__ */ u2("h3", { class: "project-card-title", children: title }),
-          fm.description && /* @__PURE__ */ u2("p", { class: "project-card-desc", children: fm.description }),
-          /* @__PURE__ */ u2("div", { class: "project-card-footer", children: [
-            tags.length > 0 && /* @__PURE__ */ u2("span", { class: "project-card-tags", children: tags.map((tag) => `#${tag}`).join("  ") }),
-            options.showDate && date && /* @__PURE__ */ u2("span", { class: "project-card-date", children: date.getFullYear() })
-          ] })
-        ] })
-      ] });
-    }) });
+    return /* @__PURE__ */ u2("div", { class: "project-cards", children: pages.map((page) => renderCard(page, slug2)) });
   };
   ProjectCards.css = project_cards_default;
+  ProjectCards.afterDOMLoaded = `
+    function placeFeaturedCards() {
+      const cards = document.querySelector(".featured-cards-source");
+      const target = document.querySelector(".callout.featured > .callout-content");
+      if (!cards || !target) return;
+      cards.classList.remove("featured-cards-source");
+      target.appendChild(cards);
+      target.classList.add("has-cards");
+    }
+    document.addEventListener("nav", placeFeaturedCards);
+    placeFeaturedCards();
+  `;
   return ProjectCards;
 });
 

@@ -1,5 +1,5 @@
 // src/components/styles/hero.scss
-var hero_default = 'body[data-slug=index] .article-title,\nbody[data-slug=index] .page-header .content-meta,\nbody[data-slug=index] .page-header .tags {\n  display: none;\n}\n\n.hero {\n  position: relative;\n  padding: 2.5rem 0 2.75rem;\n  margin-bottom: 1.5rem;\n  border-bottom: 1px solid var(--lightgray);\n}\n.hero::before {\n  content: "";\n  position: absolute;\n  top: 0.5rem;\n  left: -3rem;\n  width: 22rem;\n  height: 14rem;\n  background: radial-gradient(closest-side, var(--highlight), transparent);\n  filter: blur(8px);\n  pointer-events: none;\n  z-index: -1;\n}\n.hero > * {\n  animation: hero-rise 0.6s ease-out both;\n}\n.hero > :nth-child(2) {\n  animation-delay: 0.08s;\n}\n.hero > :nth-child(3) {\n  animation-delay: 0.16s;\n}\n.hero > :nth-child(4) {\n  animation-delay: 0.24s;\n}\n.hero > :nth-child(5) {\n  animation-delay: 0.32s;\n}\n\n.hero-kicker {\n  margin: 0 0 0.5rem;\n  color: var(--secondary);\n  font-family: var(--headerFont);\n  font-weight: 600;\n  font-size: 1rem;\n  letter-spacing: 0.08em;\n  text-transform: uppercase;\n}\n\n.hero-name {\n  margin: 0;\n  font-size: clamp(2.6rem, 7vw, 4.25rem);\n  line-height: 1.02;\n  letter-spacing: -0.03em;\n  color: var(--dark);\n}\n\n.hero-tagline {\n  max-width: 34rem;\n  margin: 1.1rem 0 0;\n  font-size: 1.2rem;\n  line-height: 1.55;\n  color: var(--darkgray);\n}\n\n.hero-location {\n  display: flex;\n  align-items: center;\n  gap: 0.4rem;\n  margin: 0.9rem 0 0;\n  font-size: 0.95rem;\n  color: var(--gray);\n}\n\n.hero-links {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1.5rem;\n  margin-top: 1.75rem;\n}\n\n.hero-button {\n  font-family: var(--headerFont);\n  font-weight: 600;\n  font-size: 0.95rem;\n  text-decoration: none;\n}\n.hero-button.primary {\n  padding: 0.6rem 1.1rem;\n  border-radius: 4px;\n  background: var(--secondary);\n  color: var(--light);\n  transition: opacity 0.15s ease;\n}\n.hero-button.primary:hover {\n  opacity: 0.88;\n}\n.hero-button.secondary {\n  color: var(--dark);\n  border-bottom: 1px solid var(--gray);\n  padding-bottom: 1px;\n  transition: border-color 0.15s ease;\n}\n.hero-button.secondary:hover {\n  border-color: var(--secondary);\n}\n\n@keyframes hero-rise {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: none;\n  }\n}\n@media (prefers-reduced-motion: reduce) {\n  .hero > * {\n    animation: none;\n  }\n}';
+var hero_default = 'body[data-slug=index] .article-title,\nbody[data-slug=index] .page-header .content-meta,\nbody[data-slug=index] .page-header .tags {\n  display: none;\n}\n\n.hero {\n  position: relative;\n  padding: 2.5rem 0 2.75rem;\n  margin-bottom: 1.5rem;\n  border-bottom: 1px solid var(--lightgray);\n}\n.hero::before {\n  content: "";\n  position: absolute;\n  top: 0.5rem;\n  left: -3rem;\n  width: 22rem;\n  height: 14rem;\n  background: radial-gradient(closest-side, var(--highlight), transparent);\n  filter: blur(8px);\n  pointer-events: none;\n  z-index: -1;\n}\n.hero > * {\n  animation: hero-rise 0.6s ease-out both;\n}\n.hero > :nth-child(2) {\n  animation-delay: 0.08s;\n}\n.hero > :nth-child(3) {\n  animation-delay: 0.16s;\n}\n.hero > :nth-child(4) {\n  animation-delay: 0.24s;\n}\n.hero > :nth-child(5) {\n  animation-delay: 0.32s;\n}\n\n.hero-kicker {\n  margin: 0 0 0.5rem;\n  color: var(--secondary);\n  font-family: var(--headerFont);\n  font-weight: 600;\n  font-size: 1rem;\n  letter-spacing: 0.08em;\n  text-transform: uppercase;\n}\n\n.hero-name {\n  margin: 0;\n  font-size: clamp(2.6rem, 7vw, 4.25rem);\n  line-height: 1.02;\n  letter-spacing: -0.03em;\n  color: var(--dark);\n}\n\n.hero-tagline {\n  max-width: 34rem;\n  margin: 1.1rem 0 0;\n  font-size: 1.2rem;\n  line-height: 1.55;\n  color: var(--darkgray);\n}\n\n.hero-location {\n  display: flex;\n  align-items: center;\n  gap: 0.4rem;\n  margin: 0.9rem 0 0;\n  font-size: 0.95rem;\n  color: var(--gray);\n}\n\n.hero-links {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1.5rem;\n  margin-top: 1.75rem;\n}\n\n.hero-button {\n  font-family: var(--headerFont);\n  font-weight: 600;\n  font-size: 0.95rem;\n  text-decoration: none;\n}\n.hero-button.primary {\n  padding: 0.6rem 1.1rem;\n  border-radius: 4px;\n  background: var(--secondary);\n  color: var(--light);\n  transition: opacity 0.15s ease;\n}\n.hero-button.primary:hover {\n  opacity: 0.88;\n}\n.hero-button.secondary {\n  color: var(--dark);\n  border-bottom: 1px solid var(--gray);\n  padding-bottom: 1px;\n  transition: border-color 0.15s ease;\n}\n.hero-button.secondary:hover {\n  border-color: var(--secondary);\n}\n.hero-button.subtle {\n  font-family: var(--bodyFont);\n  font-weight: normal;\n  font-size: 0.85rem;\n  color: var(--gray);\n  transition: color 0.15s ease;\n}\n.hero-button.subtle:hover {\n  color: var(--secondary);\n}\n\n.callout.short,\n.callout.story {\n  padding: 0;\n  border: none;\n  background: none;\n  box-shadow: none;\n  overflow: visible;\n}\n.callout.short > .callout-title,\n.callout.story > .callout-title {\n  display: none;\n}\n.callout.short > .callout-content,\n.callout.story > .callout-content {\n  padding: 0;\n  background: none;\n  overflow: visible;\n}\n\narticle[data-bio=short] .callout.story,\narticle[data-bio=story] .callout.short {\n  display: none;\n}\n\narticle[data-bio] .callout.short,\narticle[data-bio] .callout.story {\n  animation: bio-fade 0.25s ease-out;\n}\n\n.bio-toggle {\n  display: inline-flex;\n  gap: 0.25rem;\n  margin: 0.25rem 0 0.75rem;\n  padding: 0.2rem;\n  border: 1px solid var(--lightgray);\n  border-radius: 6px;\n}\n.bio-toggle button {\n  padding: 0.3rem 0.75rem;\n  border: none;\n  border-radius: 4px;\n  background: none;\n  color: var(--gray);\n  font-family: var(--headerFont);\n  font-weight: 600;\n  font-size: 0.85rem;\n  cursor: pointer;\n  transition: background-color 0.15s ease, color 0.15s ease;\n}\n.bio-toggle button:hover {\n  color: var(--dark);\n}\n.bio-toggle button[aria-pressed=true] {\n  background: var(--highlight);\n  color: var(--secondary);\n}\n\n@keyframes bio-fade {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes hero-rise {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: none;\n  }\n}\n@media (prefers-reduced-motion: reduce) {\n  .hero > *,\n  article[data-bio] .callout.short,\n  article[data-bio] .callout.story {\n    animation: none;\n  }\n}';
 var l;
 l = { __e: function(n2, l2, u3, t2) {
   for (var i2, r2, o2; l2 = l2.__; ) if ((i2 = l2.__c) && !i2.__) try {
@@ -64,7 +64,8 @@ var Hero_default = ((opts) => {
         "a",
         {
           href: link.href,
-          class: `hero-button ${link.style === "primary" ? "primary" : "secondary"}`,
+          ...link.newTab ? { target: "_blank", rel: "noopener noreferrer" } : {},
+          class: `hero-button ${link.style === "primary" || link.style === "subtle" ? link.style : "secondary"}`,
           children: link.label
         }
       )) })
@@ -80,6 +81,45 @@ var Hero_default = ((opts) => {
     }
     document.addEventListener("nav", openContactLinksInNewTab);
     openContactLinksInNewTab();
+
+    // TL;DR toggle: a "> [!short]" and a "> [!story]" callout on the same page
+    // are shown one at a time, with a switch above them. Without JavaScript
+    // both stay visible.
+    function setupBioToggle() {
+      const article = document.querySelector("article");
+      const short = article && article.querySelector(".callout.short");
+      const story = article && article.querySelector(".callout.story");
+      if (!short || !story || article.querySelector(".bio-toggle")) return;
+
+      const toggle = document.createElement("div");
+      toggle.className = "bio-toggle";
+      toggle.setAttribute("role", "group");
+      toggle.setAttribute("aria-label", "Bio length");
+      const options = [["short", "TL;DR"], ["story", "Full story"]];
+      const buttons = options.map(([mode, label]) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = label;
+        button.dataset.mode = mode;
+        button.addEventListener("click", () => setMode(mode));
+        toggle.appendChild(button);
+        return button;
+      });
+
+      function setMode(mode) {
+        article.dataset.bio = mode;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
+        try { localStorage.setItem("bio-mode", mode); } catch {}
+      }
+
+      const first = short.compareDocumentPosition(story) & Node.DOCUMENT_POSITION_FOLLOWING ? short : story;
+      first.before(toggle);
+      let saved = null;
+      try { saved = localStorage.getItem("bio-mode"); } catch {}
+      setMode(saved === "story" ? "story" : "short");
+    }
+    document.addEventListener("nav", setupBioToggle);
+    setupBioToggle();
 
     // The graph sizes its canvas once, from its box's width at load time.
     // When the width changes (window resize, rotating a phone), ask the
