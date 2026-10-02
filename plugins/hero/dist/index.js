@@ -83,7 +83,8 @@ var Hero_default = ((opts) => {
     openContactLinksInNewTab();
 
     // TL;DR toggle: a "> [!short]" and a "> [!story]" callout on the same page
-    // are shown one at a time, with a switch above them. Without JavaScript
+    // are shown one at a time (full story by default), with a switch above
+    // them. Without JavaScript
     // both stay visible.
     function setupBioToggle() {
       const article = document.querySelector("article");
@@ -116,7 +117,7 @@ var Hero_default = ((opts) => {
       first.before(toggle);
       let saved = null;
       try { saved = localStorage.getItem("bio-mode"); } catch {}
-      setMode(saved === "story" ? "story" : "short");
+      setMode(saved === "short" ? "short" : "story");
     }
     document.addEventListener("nav", setupBioToggle);
     setupBioToggle();
