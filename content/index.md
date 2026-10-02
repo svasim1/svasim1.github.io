@@ -12,11 +12,6 @@ cssclasses: ""
 > [!short]
 > I'm Svante, a 20-year-old Data Center Technician at [Amazon Web Services](https://aws.amazon.com/) in Västerås. I build software, AI, IoT and game projects, and outside of tech I'm into cars and [[Thoughts/sim-racing\|sim racing]].
 
-I'm 20 years old and this is my personal website, where I share my projects, thoughts and experiences in the world of technology. I am passionate about innovation and constantly exploring new ideas and solutions to shape the future.
-
-> [!short]
-> I'm Svante, a 20-year-old Data Center Technician at [Amazon Web Services](https://aws.amazon.com/) in Västerås. I build software, AI, IoT and game projects, and outside of tech I'm into cars and [[Thoughts/sim-racing\|sim racing]].
-
 > [!story]
 > I'm 20 years old and this is my personal website, where I share my projects, thoughts and experiences in the world of technology. I am passionate about innovation and constantly exploring new ideas and solutions to shape the future.
 >
