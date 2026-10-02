@@ -1,6 +1,7 @@
 ---
 publish: true
 title: Svante's Digital Garden
+description: Svante Ericsson is a Data Center Technician at Amazon Web Services in Västerås, Sweden, building projects in software, AI, IoT and games.
 created: 2026-07-24
 modified: 2026-07-24
 tags:
