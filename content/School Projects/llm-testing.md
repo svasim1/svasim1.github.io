@@ -2,7 +2,7 @@
 publish: true
 title: LLM-testing
 description: An LLM with Retrieval-Augmented Generation (RAG) backend and API, built in Python.
-created: 2026-07-24T19:53:47.558+02:00
+created: 2024-10-11
 modified: 2026-02-12
 tags:
   - ai
