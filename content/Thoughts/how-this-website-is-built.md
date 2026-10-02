@@ -3,7 +3,7 @@ publish: true
 title: How This Website Is Built
 description: The setup behind svasim.se, from notes in Obsidian to a published website.
 created: 2026-10-02
-modified: 2026-10-02T13:16:58.386+02:00
+modified: 2026-10-02T13:49:17.506+02:00
 tags:
   - thoughts
   - web
@@ -28,7 +28,7 @@ The [Quartz Syncer](https://github.com/saberzero1/quartz-syncer) plugin pushes m
 
 On top of Quartz I've added a few custom parts:
 
-- The intro at the top of the homepage
+- The intro at the top of the [[index\|homepage]]
 - The animated background, which reacts to your cursor
 - Timeline and contact sections that I write as normal callouts in Obsidian
 - My own icon and social preview images

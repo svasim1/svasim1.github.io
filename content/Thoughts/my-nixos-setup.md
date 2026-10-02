@@ -3,7 +3,7 @@ publish: true
 title: My NixOS Setup
 description: How I configure my desktop and laptop with a single NixOS flake.
 created: 2026-07-11
-modified: 2026-10-02T12:39:46.983+02:00
+modified: 2026-10-02T13:43:13.536+02:00
 tags:
   - thoughts
   - linux
@@ -18,7 +18,7 @@ The config is a flake built on `nixos-unstable`. Each machine (right now my desk
 
 ### Desktop and apps
 
-I use KDE Plasma 6, configured declaratively with [plasma-manager](https://github.com/nix-community/plasma-manager), even down to the wallpaper. [Home Manager](https://github.com/nix-community/home-manager) handles my user setup: Firefox, Zsh, Neovim, SSH and apps like Alacritty, VSCodium, Spotify and Prism Launcher for Minecraft.
+I use KDE Plasma 6, configured declaratively with [plasma-manager](https://github.com/nix-community/plasma-manager), even down to the wallpaper. [Home Manager](https://github.com/nix-community/home-manager) handles my user setup: Firefox, Zsh, Neovim, SSH and apps like Alacritty, VSCodium, Spotify and Prism Launcher for Minecraft (see also [[Hobby Projects/cubeium\|Cubeium]], my Minecraft mod)
 
 For gaming, Steam is set up with Proton-GE and GameMode.
 

@@ -3,10 +3,11 @@ publish: true
 title: Sim Racing
 description: How sim racing became my hobby, my setup, and my project to recreate Virsbo in Assetto Corsa.
 created: 2026-10-02
-modified: 2026-10-02T13:14:03.260+02:00
+modified: 2026-10-02T13:43:39.941+02:00
 tags:
   - thoughts
   - sim-racing
+  - game-dev
 cssclasses: ""
 ---
 

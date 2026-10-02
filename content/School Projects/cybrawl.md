@@ -31,3 +31,4 @@ Cybrawl is a 2D combat game developed as a collaborative project among friends. 
 
 - [Driverbot](driverbot.md)
 - [LLM testing](llm-testing.md)
+- [[School Projects/blackjack-for-kids\|Blackjack for Kids]]

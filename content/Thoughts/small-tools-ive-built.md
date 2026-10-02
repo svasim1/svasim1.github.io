@@ -3,9 +3,12 @@ publish: true
 title: Small Tools I've Built
 description: A few small projects I built to solve a problem or learn something new.
 created: 2026-07-11
-modified: 2026-10-02T13:14:19.617+02:00
+modified: 2026-10-02T13:42:49.108+02:00
 tags:
   - thoughts
+  - python
+  - javascript
+  - web
 cssclasses: ""
 ---
 

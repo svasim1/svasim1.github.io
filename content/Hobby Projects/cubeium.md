@@ -6,6 +6,8 @@ created: 2024-11-25
 modified: 2026-09-30
 tags:
   - game-dev
+  - minecraft
+  - java
 cssclasses: ""
 ---
 
@@ -36,3 +38,8 @@ Most of Cubeium's code was written with AI. I decided what the mod should do and
 
 - [GitHub Repository](https://github.com/svasim1/cubeium)
 - [Download](https://modrinth.com/mod/cubeium)
+
+## See also
+
+- [[Hobby Projects/bazaar-prize-tracker\|Bazaar Prize Tracker]]
+- [[School Projects/cybrawl\|Cybrawl]]
