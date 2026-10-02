@@ -83,7 +83,7 @@ plugins:
     enabled: true
     order: 70
   - source: "@quartz-community/latex"
-    enabled: true
+    enabled: false
     options:
       renderEngine: katex
     order: 80
@@ -161,6 +161,8 @@ plugins:
     layout:
       position: beforeBody
       priority: 10
+      # the homepage hero has its own heading
+      condition: not-index
   - source: "@quartz-community/content-meta"
     enabled: true
     layout:

@@ -50,6 +50,8 @@ function Seo(opts) {
       const site = siteUrl(ctx);
       return {
         additionalHead: [
+          // icon used when the site is saved to an iPhone/iPad home screen
+          /* @__PURE__ */ u2("link", { rel: "apple-touch-icon", href: `${site}/static/icon.png` }),
           (page) => {
             if (page.slug !== "index" || !opts?.googleSiteVerification) return null;
             return /* @__PURE__ */ u2("meta", { name: "google-site-verification", content: opts.googleSiteVerification });

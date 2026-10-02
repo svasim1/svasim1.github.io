@@ -25,7 +25,7 @@ declare function Seo(opts?: SeoOptions): {
     externalResources(ctx: BuildCtx): {
         additionalHead?: undefined;
     } | {
-        additionalHead: ((page: PageData) => preact.JSX.Element | null)[];
+        additionalHead: (preact.JSX.Element | ((page: PageData) => preact.JSX.Element | null))[];
     };
     emit(ctx: BuildCtx): Promise<string[]>;
     partialEmit(): AsyncGenerator<never, void, unknown>;
