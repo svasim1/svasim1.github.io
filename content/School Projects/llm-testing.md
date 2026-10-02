@@ -29,5 +29,6 @@ This project implements a Large Language Model with a Retrieval-Augmented Genera
 
 ## See also
 
+- [[School Projects/riksdagstracker\|RiksdagsTracker UF]]
 - [Driverbot](driverbot.md)
 - [Cybrawl](cybrawl.md)

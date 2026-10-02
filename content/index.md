@@ -9,18 +9,22 @@ tags:
 cssclasses: ""
 ---
 
+> [!short]
+> I'm Svante, a 20-year-old Data Center Technician at [Amazon Web Services](https://aws.amazon.com/) in Västerås. I build software, AI, IoT and game projects, and outside of tech I'm into cars and [[Thoughts/sim-racing\|sim racing]].
+
 I'm 20 years old and this is my personal website, where I share my projects, thoughts and experiences in the world of technology. I am passionate about innovation and constantly exploring new ideas and solutions to shape the future.
 
+> [!story]
 I graduated in 2025 from the [technology specialization](https://vasteras.hitachigymnasiet.se/utbildning-teknikprogrammet/teknikspets) program at [Hitachigymnasiet](https://vasteras.hitachigymnasiet.se/) (formerly ABB-gymnasiet) in Västerås, where I had the opportunity to deepen my knowledge in programming, AI, IoT, cloud services and modern product development. At Hitachigymnasiet I have been involved in building everything from websites, apps and AI to games, drones and physical systems. Examples of projects I have worked on are an [AI chatbot with RAG backend in Python](llm-testing.md), a [surgeon simulator](https://github.com/abbindustrigymnasium/VRregVast) developed in collaboration with [Region Västmanland](https://regionvastmanland.se/), and a [radio-controlled vehicle](driverbot.md) that can be controlled over the network. I was also a web developer in RiksdagsTracker UF, where we took 4th place in the JA company of the year in Västmanland 2025. [AI Sweden](https://www.ai.se/en) recognized [my work](llm-testing.md) and awarded me, and I also received an award for being a role model for other students.
-
+>
 After graduating, I started working as a Chief Technology Officer (CTO) at [Triljon](https://triljon.com/), a fintech startup working to modernize the way investors and startups connect and collaborate. It was a fun and rewarding experience, but I decided to step down six months later in January 2026. I wrote about [[Thoughts/what-i-learned-as-a-cto\|what I learned as a CTO]]. During that period I also took courses in Python and Linux at [Mälardalens University](https://www.mdu.se/).
-
+>
 I then spent a year at [NTI Gymnasiet](https://ntigymnasiet.se/vasteras/) in Västerås, where I became a [certified upper secondary school engineer](https://sv.wikipedia.org/wiki/Gymnasieingenj%C3%B6r) in software design and received several certifications. During that year I also worked part-time at an AI startup, which gave me early hands-on experience working in a real tech environment.
-
+>
 I now work as a Data Center Technician at [Amazon Web Services](https://aws.amazon.com/) in Västerås, where I am part of the team keeping the infrastructure running that powers the cloud.
-
+>
 I am a committed and curious problem solver who is driven by the possibilities of technology. My passion for understanding, creating and improving makes me constantly want to learn more and develop. I am also a team player who thrives on collaboration, and combines my technical focus with structure, communication and accuracy to contribute to both a good atmosphere and strong results.
-
+>
 Outside of tech I'm a big car enthusiast, and since 2019 I've been into [[Thoughts/sim-racing\|sim racing]], mostly drifting in Assetto Corsa.
 
 This website is built with [Quartz](https://quartz.jzhao.xyz/), and I wrote about [[Thoughts/how-this-website-is-built\|how it works]]. Feel free to explore and check out my projects, and don't hesitate to reach out if you want to connect or collaborate on something exciting!
@@ -29,11 +33,12 @@ This website is built with [Quartz](https://quartz.jzhao.xyz/), and I wrote abou
 ---
 
 ### Featured projects
-
-- [Cybrawl](cybrawl.md)
-- [Cubeium](cubeium.md)
-- [Driverbot](driverbot.md)
-- [LLM testing](llm-testing.md)
+> [!featured]
+>- [Cybrawl](cybrawl.md)
+>- [Cubeium](cubeium.md)
+>- [Driverbot](driverbot.md)
+>- [LLM testing](llm-testing.md)
+>- [[School Projects/riksdagstracker\|RiksdagsTracker UF]]
 
 More in [[Hobby Projects/index\|Hobby Projects]], [[School Projects/index\|School Projects]] and [[Thoughts/index\|Thoughts]], or browse [all tags](/tags/)
 
@@ -48,7 +53,7 @@ More in [[Hobby Projects/index\|Hobby Projects]], [[School Projects/index\|Schoo
 >   - Certified in software design, plus part-time work at an AI startup.
 > - **2025 - 2026** Chief Technology Officer at [Triljon](https://triljon.com/)
 >   - Fintech startup connecting investors and startups.
-> - **2024 - 2025** Web developer at RiksdagsTracker UF
+> - **2024 - 2025** Web developer at [[School Projects/riksdagstracker\|RiksdagsTracker UF]]
 >   - 4th place in JA company of the year, Västmanland 2025.
 > - **2022 - 2025** Technology specialization, [Hitachigymnasiet](https://vasteras.hitachigymnasiet.se/)
 >   - Programming, AI, IoT and cloud. Recognized by [AI Sweden](https://www.ai.se/en) for [my work](llm-testing.md). Also took Python and Linux courses at [Mälardalens University](https://www.mdu.se/).

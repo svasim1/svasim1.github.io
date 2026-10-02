@@ -3,7 +3,7 @@ publish: true
 title: Web Frameworks
 description: My thoughts about certain Web Frameworks.
 created: 2026-02-13
-modified: 2026-10-02T13:18:10.815+02:00
+modified: 2026-10-02T16:16:11.832+02:00
 tags:
   - thoughts
   - web
@@ -26,7 +26,7 @@ It did the job, however in my case I felt like it didn't scale well enough and w
 
 This framework adds routing and SSR on top of Vue.js which scales better and is an easy full-stack framework to use once you get the hang of it. However there's a slight learning curve if you're coming from plain Vue.js.
 
-I used Nuxt to create the website for RiksdagsTracker UF, which was actually launched to the public too. Wasn't the largest project, but Nuxt did a perfect job.
+I used Nuxt to create the website for [[School Projects/riksdagstracker\|RiksdagsTracker UF]], which was actually launched to the public too. Wasn't the largest project, but Nuxt did a perfect job.
 
 ### SvelteKit
 
