@@ -47,11 +47,11 @@ More in [[Hobby Projects/index\|Hobby Projects]], [[School Projects/index\|Schoo
 > - **2025 - 2026** Upper secondary school engineer, [NTI Gymnasiet](https://ntigymnasiet.se/vasteras/)
 >   - Certified in software design, plus part-time work at an AI startup.
 > - **2025 - 2026** Chief Technology Officer at [Triljon](https://triljon.com/)
->   - Fintech startup connecting investors and startups. Also took Python and Linux courses at [Mälardalens University](https://www.mdu.se/).
+>   - Fintech startup connecting investors and startups.
 > - **2024 - 2025** Web developer at RiksdagsTracker UF
 >   - 4th place in JA company of the year, Västmanland 2025.
 > - **2022 - 2025** Technology specialization, [Hitachigymnasiet](https://vasteras.hitachigymnasiet.se/)
->   - Programming, AI, IoT and cloud. Recognized by [AI Sweden](https://www.ai.se/en) for [my work](llm-testing.md).
+>   - Programming, AI, IoT and cloud. Recognized by [AI Sweden](https://www.ai.se/en) for [my work](llm-testing.md). Also took Python and Linux courses at [Mälardalens University](https://www.mdu.se/).
 
 ---
 ### Connect with me
