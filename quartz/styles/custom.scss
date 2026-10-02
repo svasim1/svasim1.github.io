@@ -231,3 +231,42 @@ article + hr {
     animation: none;
   }
 }
+
+/* Phones: show the graph right after the article, before the other sidebar
+   content (the explorer is a menu button in the header there anyway) */
+@media all and (max-width: 800px) {
+  #quartz-root #quartz-body {
+    grid-template-areas:
+      "grid-header"
+      "grid-center"
+      "grid-sidebar-left"
+      "grid-sidebar-right"
+      "grid-footer";
+  }
+}
+
+/* Tablets: the sidebar is laid out horizontally there, so the explorer's
+   collapse (which shrinks its height) has no effect; hide the list instead */
+@media all and (min-width: 801px) and (max-width: 1200px) {
+  .explorer.collapsed > .explorer-content {
+    display: none;
+  }
+}
+
+/* Below desktop the sidebars stack under the article; indent them so they
+   line up with the article text */
+@media all and (max-width: 1200px) {
+  #quartz-root .sidebar.left,
+  #quartz-root .sidebar.right {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #quartz-root .sidebar.left,
+  #quartz-root .sidebar.right {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

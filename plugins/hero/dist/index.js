@@ -80,6 +80,20 @@ var Hero_default = ((opts) => {
     }
     document.addEventListener("nav", openContactLinksInNewTab);
     openContactLinksInNewTab();
+
+    // The graph sizes its canvas once, from its box's width at load time.
+    // When the width changes (window resize, rotating a phone), ask the
+    // page to re-render so the graph redraws at the new size.
+    let lastWidth = window.innerWidth;
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (window.innerWidth === lastWidth) return;
+        lastWidth = window.innerWidth;
+        document.dispatchEvent(new CustomEvent("render"));
+      }, 250);
+    });
   `;
   return Hero;
 });

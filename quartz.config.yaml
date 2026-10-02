@@ -160,6 +160,8 @@ plugins:
     layout:
       position: right
       priority: 30
+      # hidden on phones; the graph and "See also" lists cover it there
+      display: desktop-only
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
